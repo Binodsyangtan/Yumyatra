@@ -12,17 +12,18 @@ const cookieParser = require('cookie-parser');
 
 db();
 
-// app.use(cors({
-//   origin: 'https://gofood4real.netlify.app',
-//   credentials: true,
-//   methods: ['GET', 'POST', 'PUT', 'DELETE']
-// }));
-
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://yum-yatra.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
+
+
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   credentials: true
+// }));
 
 app.use(express.json());
 app.use(cookieParser());
